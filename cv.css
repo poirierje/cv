@@ -195,6 +195,11 @@ a {
 	opacity: 0.5;
 }
 
+.infos .nation-en::before {
+	content: "Nationality : ";
+	opacity: 0.5;
+}
+
 .infos .age::before {
 	content: "Age : ";
 	opacity: 0.5;
@@ -416,3 +421,42 @@ a {
 	color: #d0d0d0;
 }
 
+/* ********************************************************************************************* */
+/* * PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT * */
+/* * PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT * */
+/* ********************************************************************************************* */
+
+@media print {
+	
+	.panel1-wrapper {
+		width: 200px;
+	}
+	
+	.panel1-wrapper .third {
+		display: none;
+	}
+	
+	.panel2-wrapper {
+		margin-left: 270px;
+	}
+
+	.chapter.sep {
+		font-size: 1.4rem;
+	}
+	
+	.chapter.sep:nth-of-type(2) {
+		margin-top: 200px;
+	}
+	
+	.chapter.sep:nth-of-type(4) {
+		margin-top: 340px;
+	}
+	
+	.bullet-entries {
+		flex-direction: column;	
+	}
+
+	.bullet-entry-list {
+		width:     100%;
+	}
+}
