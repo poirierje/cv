@@ -137,19 +137,20 @@ a {
 
 .identity > .first {
 	font-size:   3.5rem;
+	font-weight: 500;
 	line-height: 4rem;
 }
 
 .identity > .second {
 	font-size:   2rem;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 2.5rem;
 }
 
 .identity > .third {
-	font-size:   3rem;
-	font-weight: 400;
+	font-size:   2rem;
 	line-height: 2rem;
+	color: yellow!important;
 }
 
 .identity > .third > a{
@@ -272,6 +273,10 @@ a {
 	text-transform: uppercase;
 }
 
+.panel2 .subtitle i.fa-hiking {
+    font-size:1.6rem;
+}
+
 .panel2 .subtitle i.fa-plane {
 	margin-left:5px;
 	
@@ -279,6 +284,7 @@ a {
     -moz-animation:spin 20s linear infinite;
     animation:spin 20s linear infinite;
 }
+
 @-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
@@ -314,38 +320,25 @@ a {
 
 /* ---------- PROFIL ---------- */
 
-.profil div strong {
+.profil div .parag-title {
 	display: inline-block;
 	margin-right: 1rem;
 }
 
-.profil div strong::after {
+.profil div .parag-title::after {
 	content: " :";
 }
 
-.profil div strong::first-letter {
+.profil div .parag-title::first-letter {
 	text-transform: uppercase;
 }
 
 /* ---------- ENTRIES ---------- */
 
-.entry {
-	display: flex;
-}
-
-@media screen and (max-width: 767px) {
-	.entry {
-		flex-direction: column;	
-	}
-	
-	.date {
-		margin-bottom: 1rem;
-	}
-}
-
 .entry .date {
 	width: 13rem;
-	font-weight: 400;
+	font-weight: 700;
+	line-height: 3rem;
 }
 
 .entry .explain .entry-title {
