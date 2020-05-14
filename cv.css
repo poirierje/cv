@@ -141,7 +141,17 @@ a {
 	line-height: 4rem;
 }
 
-.identity > .second {
+.identity > .second-block {
+	display: flex;
+	flex-direction: column;
+	flex: align-items: center; 
+	
+	padding: 25px 0;
+	
+	background-color: white;
+	border-radius: 10px;
+	color : #ff442a;	
+	
 	font-size:   2rem;
 	font-weight: 500;
 	line-height: 2.5rem;
