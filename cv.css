@@ -12,23 +12,13 @@ html * {
 }
 
 body {
-	position: relative;
-	
 	margin: 0rem; 
-	
-	display: flex;
 	
 	background-color: #ffffff; 
 	
 	font-family: 'Roboto', sans-serif; 
 	font-size:   1.6rem; 
 	font-weight: 300; 
-}
-
-@media screen and (max-width: 767px) {
-	body {
-		flex-direction: column;
-	}
 }
 
 a {
@@ -41,26 +31,10 @@ a {
 /* ********************************************************************************************* */
 
 .panel1-wrapper {
-	position: fixed;
-	top:      0;
-	left:     0;
-
-	width: 250px;
-	height: 100%;
-	
 	padding: 3rem;
 
 	background-color: #ff442a;
 	color:            #ffffff;
-    opacity: 0.75;
-}
-
-@media screen and (max-width: 767px) {
-	.panel1-wrapper {
-		position: inherit;
-		width:  100%;
-		height: inherit;
-	}
 }
 
 .panel1 {
@@ -115,7 +89,7 @@ a {
 }
 
 .avatar img {
-	max-width: 11rem;
+	width: 10rem;
 	
 	border:        3px solid #ffffff;
 	border-radius: 50%;
@@ -144,7 +118,7 @@ a {
 .identity > .second-block {
 	display: flex;
 	flex-direction: column;
-	flex: align-items: center; 
+	align-items: center; 
 	
 	padding: 25px 0;
 	
@@ -235,13 +209,6 @@ a {
 /* ********************************************************************************************* */
 
 .panel2-wrapper {
-	margin-left:  320px;	
-}
-
-@media screen and (max-width: 767px) {
-	.panel2-wrapper {
-		margin-left: 0px;	
-	}
 }
 
 .panel2 {
@@ -270,6 +237,11 @@ a {
 	
 	font-size:   2.4rem;
 	font-weight: 400;
+
+	padding: 10px; 
+    background-color: #ff442a;
+	border-radius: 5px;
+	color: white;
 }
 
 .panel2 .title span::first-letter {
@@ -288,28 +260,26 @@ a {
 	text-transform: uppercase;
 }
 
-.panel2 .subtitle i.fa-hiking {
-    font-size:1.6rem;
+.panel2 .objectives {
+    font-size:2rem!important;
+	color: #ff442a;
+	text-align: center;
 }
 
-.panel2 .subtitle i.fa-plane {
-	margin-left:5px;
-	
-	-webkit-animation:spin 20s linear infinite;
-    -moz-animation:spin 20s linear infinite;
-    animation:spin 20s linear infinite;
+.panel2 .objectives>div{
+	margin:10px;
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+.panel2 .objectives>div:nth-child(2n) {
+	font-size:1.6rem!important;
+}
 
 .panel2 .sep-tiny {
-	margin-bottom: 2rem;	
+	margin-bottom: 3rem;	
 }
 
 .panel2 .sep {
-	margin-bottom: 4rem;	
+	margin-bottom: 5rem;	
 }
 .panel2 .sep-wide {
 	margin-bottom: 8rem;	
@@ -338,6 +308,8 @@ a {
 .profil div .parag-title {
 	display: inline-block;
 	margin-right: 1rem;
+	color: #ff442a;
+	opacity: 0.75;
 }
 
 .profil div .parag-title::after {
@@ -359,13 +331,13 @@ a {
 .entry .explain .entry-title {
 	font-weight: 500;
 	color:   #ff442a;
-	opacity: 0.75;
+	font-size: 1.6rem;
 }
 
 .entry .explain .entry-subtitle {
-	font-weight: 500;
+	font-weight: 700;
 	color:   #ff442a;
-	opacity: 0.75;
+	font-size: 1.6rem;
 }
 
 .entry .explain ul {
@@ -378,7 +350,12 @@ a {
 }
 
 .entry .explain .mission {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
+	margin-bottom: 8px;
+}
+
+.entry .explain .formation {
+	font-size: 1.4rem;
 }
 
 /* ---------- BULLETS ---------- */
@@ -406,7 +383,7 @@ a {
 
 @media screen and (max-width: 767px) {
 	.bullet-entry-list {
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 		width: 100%;
 	}
 }
@@ -436,10 +413,30 @@ a {
 /* * PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT PRINT * */
 /* ********************************************************************************************* */
 
+.col-print-1 {width:8%;  float:left;}
+.col-print-2 {width:16%; float:left;}
+.col-print-3 {width:25%; float:left;}
+.col-print-4 {width:33%; float:left;}
+.col-print-5 {width:42%; float:left;}
+.col-print-6 {width:50%; float:left;}
+.col-print-7 {width:58%; float:left;}
+.col-print-8 {width:66%; float:left;}
+.col-print-9 {width:75%; float:left;}
+.col-print-10{width:83%; float:left;}
+.col-print-11{width:92%; float:left;}
+.col-print-12{width:100%; float:left;}
+
 @media print {
 	
+	body {
+	}
+	
+	a[href]:after {
+		content: none !important;
+	}
+	
 	.panel1-wrapper {
-		width: 200px;
+		margin-right: 20px; 
 	}
 	
 	.panel1-wrapper .third {
@@ -447,7 +444,6 @@ a {
 	}
 	
 	.panel2-wrapper {
-		margin-left: 270px;
 	}
 
 	.chapter.sep {
@@ -455,11 +451,15 @@ a {
 	}
 	
 	.chapter.sep:nth-of-type(2) {
-		margin-top: 200px;
+		margin-top: 100px;
+	}
+	
+	.chapter.sep:nth-of-type(3) {
+		margin-top: 40px;
 	}
 	
 	.chapter.sep:nth-of-type(4) {
-		margin-top: 340px;
+		margin-top: 0px;
 	}
 	
 	.bullet-entries {
