@@ -89,10 +89,10 @@ a {
 }
 
 .avatar img {
-	width: 10rem;
+	width: 100%;
 	
 	border:        3px solid #ffffff;
-	border-radius: 50%;
+	/* border-radius: 50%; */
 }
 
 /* ---------- IDENTITY ---------- */
@@ -427,8 +427,9 @@ a {
 .col-print-12{width:100%; float:left;}
 
 @media print {
-	
-	body {
+
+	.col-md-3 {
+		width: 30%;
 	}
 	
 	a[href]:after {
@@ -442,8 +443,9 @@ a {
 	.panel1-wrapper .third {
 		display: none;
 	}
-	
-	.panel2-wrapper {
+
+	.contact > div {
+		margin-bottom: 0;
 	}
 
 	.chapter.sep {
@@ -451,11 +453,11 @@ a {
 	}
 	
 	.chapter.sep:nth-of-type(2) {
-		margin-top: 100px;
+		margin-top: 108px;
 	}
 	
 	.chapter.sep:nth-of-type(3) {
-		margin-top: 40px;
+		margin-top: 10px;
 	}
 	
 	.chapter.sep:nth-of-type(4) {
@@ -468,5 +470,9 @@ a {
 
 	.bullet-entry-list {
 		width:     100%;
+	}
+	
+	.bullet-empty::before {
+		opacity: 0.2;
 	}
 }
