@@ -256,6 +256,14 @@ a {
 	text-align: center;
 }
 
+.fa-rotate-45 {
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+}
+
 .panel2 .subtitle::first-letter {
 	text-transform: uppercase;
 }
