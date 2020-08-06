@@ -137,16 +137,6 @@ a {
 	line-height: 2.5rem;
 }
 
-.identity > .third {
-	font-size:   2rem;
-	line-height: 2rem;
-	color: yellow!important;
-}
-
-.identity > .third > a{
-	text-decoration: none;
-}
-
 /* ---------- CONTACT ---------- */
 
 .contact {
@@ -226,6 +216,17 @@ a {
 	
 	background-color: #ffffff;
 	color:            #000000;
+}
+
+.panel2 .asPDF {
+	margin: 0px 0px 50px 0px;
+	text-align: center;
+	font-size:   3rem;
+}
+
+.panel2 .asPDF a {
+	color: #ff442a;
+	text-decoration: none;
 }
 
 .panel2 > div {
@@ -458,42 +459,76 @@ a {
 	}
 	
 	.panel1-wrapper {
-		margin-right: 20px; 
+		margin-right: 20px;
+		border-right: 1px solid lightgray;
 	}
 	
-	.panel1-wrapper .third {
+	.asPDF {
 		display: none;
+	}
+
+	.panel2-wrapper .chapter.sep {
+		margin-left: -242px;
+		width: 162%;
+	}
+
+	.panel2 .objectives>div:nth-child(2n) {
+		margin: 50px 0px;
 	}
 
 	.contact > div {
 		margin-bottom: 0;
 	}
 
+	.contact .linkedin {
+		display: none;
+	}
+
+	.contact .fas, .contact .fab {
+		display: none;
+	}
+
+	.interests > div {
+		margin-bottom: 0px;
+	}
+
+	.infos > div {
+		margin-bottom: 0px;
+	}
+
 	.chapter.sep {
 		font-size: 1.4rem;
 	}
 	
-	.chapter.sep:nth-of-type(2) {
-		margin-top: 115px;
+	.panel2-wrapper  {
+		text-align: justify;
+	}
+	
+	.chapter .title {
+		border: 1px solid lightgray;
+	}
+	
+	.profil .title {
+		display: none;
 	}
 	
 	.chapter.sep:nth-of-type(3) {
-		margin-top: 20px;
+		margin-top: 50px;
+	}
+	
+	.chapter.sep:nth-of-type(3) .title {
+		margin-bottom: 15px;
+	}
+	
+	.chapter.sep:nth-of-type(3) .entries .entry:nth-of-type(4) {
+		margin-bottom: 80px;
 	}
 	
 	.chapter.sep:nth-of-type(4) {
 		margin-top: 0px;
 	}
 	
-	.bullet-entries {
-		flex-direction: column;	
-	}
-
-	.bullet-entry-list {
-		width:     100%;
-	}
-	
 	.bullet-empty::before {
-		opacity: 0.2;
+		opacity: 0.1;
 	}
 }
